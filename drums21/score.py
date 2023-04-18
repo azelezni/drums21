@@ -55,3 +55,7 @@ class DrumScore(Score):
 
         if should_append:
             self.drum_part.append(current_measure)
+
+    def add_notes(self, notes: List[Union[Unpitched, List[Unpitched]]]):
+        for note in notes:
+            self.add_note(note)

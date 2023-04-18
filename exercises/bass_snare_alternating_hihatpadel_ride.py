@@ -70,17 +70,23 @@ beat_patterns = {
 }
 
 score = DrumScore()
-output = {}
 
-for _ in range(24):
-    out = []
-    page_beat, beat = random.choice(list(page_1_beats.items()))
-    for _ in range(4):
-        pattern_name, pattern = random.choice(list(beat_patterns.items()))
+# for _ in range(24):
+#     page_beat, beat = random.choice(list(page_1_beats.items()))
+#     for _ in range(4):
+#         pattern_name, pattern = random.choice(list(beat_patterns.items()))
+#         tmp = dict(beat)
+#         tmp.update(pattern)
+#         notes = notes_from_part_bit_list(tmp)
+#         score.add_notes(notes)
+
+for beat in page_1_beats.values():
+    notes = notes_from_part_bit_list(beat)
+    score.add_notes(notes)
+    for pattern in beat_patterns.values():
         tmp = dict(beat)
         tmp.update(pattern)
         notes = notes_from_part_bit_list(tmp)
-        for chord in notes:
-            score.add_note(chord)
+        score.add_notes(notes)
 
 score.show()
