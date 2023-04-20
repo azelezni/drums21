@@ -1,3 +1,3 @@
-# music21-drums
+# drums21
 
-music21-drums is intended to make it easier to write Drumset scores for MuseScore.
+drums21 is intended to make it easier to write Drumset scores for MuseScore.

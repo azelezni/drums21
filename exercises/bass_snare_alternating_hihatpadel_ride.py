@@ -4,6 +4,10 @@ from drums21.score import DrumScore
 from drums21.utils import notes_from_part_bit_list
 from drums21.notes import *
 
+from music21 import environment
+
+environment.set('musicxmlPath', '~/Downloads/MuseScore-4.AppImage')
+
 page_1_snare = {
     Snare: [*[0, 0, 0, 0], *[1, 0, 0, 0], *[0, 0, 0, 0], *[1, 0, 0, 0]]
 }
